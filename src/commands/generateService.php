@@ -299,7 +299,7 @@ class generateService extends Command {
         foreach ($this->files as $file)
         {
             // Generate content based on template
-            $content = File::get(app_path() . '/commands/templates/' . $file['template']);
+            $content = File::get(base_path() . '/vendor/cgoosey1/service-generator/src/commands/templates/' . $file['template']);
             $content = str_replace($find, $replace, $content);
             
             // If entity assume they want to go down a level
