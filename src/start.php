@@ -1,3 +1,3 @@
 <?php
 // Register the command with the console
-Artisan::add(new GenerateService());
+Artisan::add(new Cgoosey\ServiceGenerator\GenerateService());
