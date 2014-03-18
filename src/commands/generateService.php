@@ -3,6 +3,8 @@
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
+use Config;
+use File;
 
 class generateService extends Command {
 
@@ -51,7 +53,7 @@ class generateService extends Command {
         $this->setFiles($name);
         
         // Generate these files
-        $this->createFiles($files, $name, $dir, $replace);
+        $this->createFiles();
         
         // Generate return message
         $this->returnMessage(ucfirst($name));
